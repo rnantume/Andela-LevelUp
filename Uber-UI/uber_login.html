@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Sign Up</title>
+        <title>Uber-Sign Up</title>
         <link rel ="stylesheet" href="assets/styles.css">
     </head>
     <body>
@@ -15,16 +15,22 @@
             <h1>Sign Up to Ride</h1>
             <h3>Safe, reliable rides in minutes</h3>
             <div class="in-line">
-               <div><label>Firstname (required)</label><br><input type="text" placeholder="Firstname" name="" required length="400"/></div>
+               <div class="in-line-element"><label>Firstname (required)</label><br><input type="text" placeholder="Firstname" name="" required length="400"/></div>
                 <div><label>Lastname (required)</label><br><input type="text" placeholder="Lastname" name="" required length="400"/></div>
             </div>
             <div class="form-content">
                     Enter your phone number (required)<br>
-                    <!-- <select name="country_code" required>
-                      <option enabled="enabled" selected="selected">+256</option>
-                    </select> -->
-                    <input type="text" placeholder="Phone number" name="phone_number" required="required" />
             </div>
+            <div class="in-line">
+                    <select name="country_code" class="select-element">
+                            <option enabled="enabled" selected="selected">+256</option>
+                            <option selected="selected">+257</option>
+                            <option  selected="selected">+255</option>
+                            <option  selected="selected">+254</option>
+                    </select>
+                   <input type="telephone" placeholder="Phone number" name="phone_number" required="required" width="500px;"/>
+            </div>
+            
             <div class="form-content">
                     Enter your Email (required)<br>
                     <input type="email" placeholder="Email" name="email" required="required" />
@@ -35,10 +41,11 @@
             </div>
            
                     <p id="promo">Add a promo code</p>
-
+            <div>
                     <input type="submit" name="Submit" value="SIGN UP" id="button"><br>
                     <div id="link_">By clicking "Sign Up", you agree to Uber's <a href="terms.txt" alt="Please, revisit next time">Terms of use</a>
                     and acknowledge you have read the <a href="terms.txt" alt="Please, revisit next time">Privacy Policy</a>.</div>
+            </div>
             </form>
 
 
