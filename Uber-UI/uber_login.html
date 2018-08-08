@@ -4,15 +4,25 @@
         <meta charset="UTF-8">
         <title>Uber-Sign Up</title>
         <link rel ="stylesheet" href="assets/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <!-- <div class="upper_bar"></div> -->
         <div class="container">
-            <form id="form-collection" > 
+            <header >
                 <div id="logo_">
-                        <!-- <h2>UBER</h2> -->
-                        <img src="assets/logo.PNG" alt="UBER"/>
-                </div>    
+                        <picture>
+                            <source srcset="assets/medium.PNG" 
+                             media="(max-width: 640px)">
+                            <source srcset="assets/small.PNG" 
+                             media="(max-width: 400px)">
+                            <source srcset="assets/logo.PNG">    
+                            <img src="assets/logo.PNG" 
+                             alt="UBER"/>
+                        </picture>
+                </div> 
+            </header>    
+            <form id="form-collection" > 
             <h1>Sign Up to Ride</h1>
             <h3>Safe, reliable rides in minutes</h3>
             <div class="in-line-name" >
@@ -50,7 +60,7 @@
             <div>
                     <input type="submit" name="Submit" value="SIGN UP" id="button"><br>
                     <div id="link_">By clicking "Sign Up", you agree to Uber's <a href="terms.txt" alt="Please, revisit next time">Terms of use</a>
-                    and acknowledge you <br> have read the <a href="terms.txt" alt="Please, revisit next time">Privacy Policy</a>.</div>
+                    and acknowledge you have read the <a href="terms.txt" alt="Please, revisit next time">Privacy Policy</a>.</div>
             </div>
             </form>
 
