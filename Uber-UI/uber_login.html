@@ -8,43 +8,49 @@
     <body>
         <!-- <div class="upper_bar"></div> -->
         <div class="container">
-            <form > 
-            <div id="logo_">
-                <h2>UBER</h2>
-            </div>        
+            <form id="form-collection" > 
+                <div id="logo_">
+                        <!-- <h2>UBER</h2> -->
+                        <img src="assets/logo.PNG" alt="UBER"/>
+                </div>    
             <h1>Sign Up to Ride</h1>
             <h3>Safe, reliable rides in minutes</h3>
-            <div class="in-line">
-               <div class="in-line-element"><label>Firstname (required)</label><br><input type="text" placeholder="Firstname" name="" required length="400"/></div>
+            <div class="in-line-name" >
+                <div class="item" ><label>Firstname (required)</label><br><input type="text" placeholder="Firstname" name="" required length="400"/></div>
                 <div><label>Lastname (required)</label><br><input type="text" placeholder="Lastname" name="" required length="400"/></div>
             </div>
-            <div class="form-content">
-                    Enter your phone number (required)<br>
+            <div >
+                 <label>Enter your phone number (required)</label><br>
+                 <div class="in-line-phone" >
+                        <div><select name="country_code" class="select-element">
+                                <option enabled="enabled" selected="selected">+256</option>
+                                <option selected="selected">+257</option>
+                                <option  selected="selected">+255</option>
+                                <option  selected="selected">+254</option>
+                             </select>
+                        </div>
+                        <div>
+                           <input type="tel" placeholder="Phone number" name="phone_number" required="required" width="500px;"/>
+                        </div>
             </div>
-            <div class="in-line">
-                    <select name="country_code" class="select-element">
-                            <option enabled="enabled" selected="selected">+256</option>
-                            <option selected="selected">+257</option>
-                            <option  selected="selected">+255</option>
-                            <option  selected="selected">+254</option>
-                    </select>
-                   <input type="telephone" placeholder="Phone number" name="phone_number" required="required" width="500px;"/>
+            <div >
+                 <label>Enter your Email (required)</label>
             </div>
-            
-            <div class="form-content">
-                    Enter your Email (required)<br>
-                    <input type="email" placeholder="Email" name="email" required="required" />
+            <div class="block_">
+                 <input type="email" placeholder="Email" name="email" required="required" />
             </div>
-            <div class="form-content"> 
-                    Enter a Password (required)<br>
-                    <input type="password" placeholder="Password" name="password" required="required" />
+            <div> 
+                <label>Enter a Password (required)</label>
+            </div>
+            <div class="block_"> 
+                <input type="password" placeholder="Password" name="password" required="required" />
             </div>
            
                     <p id="promo">Add a promo code</p>
             <div>
                     <input type="submit" name="Submit" value="SIGN UP" id="button"><br>
                     <div id="link_">By clicking "Sign Up", you agree to Uber's <a href="terms.txt" alt="Please, revisit next time">Terms of use</a>
-                    and acknowledge you have read the <a href="terms.txt" alt="Please, revisit next time">Privacy Policy</a>.</div>
+                    and acknowledge you <br> have read the <a href="terms.txt" alt="Please, revisit next time">Privacy Policy</a>.</div>
             </div>
             </form>
 
