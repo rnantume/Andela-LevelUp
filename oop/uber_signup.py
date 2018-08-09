@@ -1,60 +1,63 @@
-
-""" Modeling a signup form for Uber riders using object oriented concepts"""
-
-import re
+import uuid
 
 users = []
-
 class User:
-    def __init__(self, first_name, last_name, phone_number, email, password):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.phone_number = phone_number
-        self.email = User.validate_email(email)
-        self.password = password
     
-    def save_on_submit(self, first_name, last_name, phone_number, email, password):
-        user = {'fname': self.first_name,
-                'lname': self.last_name,
-                'contact_no':self.phone_number,
-                'email': self.email,
-                'password': self.password
-                }
-        users.append(user)
-        return users
-    
+    def __init__(self):
+        self.details = {}
+        
+    def save_details(self, first_name, last_name, phone_number, email, password):
+        try:
+            self.details[id] = uuid.uuid4().int
+            self.details[first_name] = input("Enter your first name: ")
+            self.details[last_name] = input("Enter your last name: ")
+            self.details[phone_number] =input("Enter your phone number: ")
+            self.details[email] = input("Enter your email: ")
+            self.details[password] = input("Enter a password")        
+        except AttributeError:
+           raise("All fields must be filled!")
+        else:
+            return users.append(self.details)
+
     @staticmethod
     def validate_email(email):
-        regex = 
-        if re.search(regex, email)
+        if re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email) == 1:
             return email      
         else:
             print("The email pattern does not match the standard!")
 
+    def greeting(self, id):
+        for user in users:
+            if user[id] == id:
+                return("Hi {} {}!".format(user[first_name], user[last_name])
+ 
+    def find_rider(self, user_id):
+        for user in users: 
+            if user[id] == user_id:
+                return user
+            
+        return("Person of id {} not found".format(id))
 
-    def greeting(self):
-        return("Hi {} {}!".format(self.first_name, self.last_name))
-
-    
     def login(self, user_email, user_password):
-        for u in users:
-            if user_email ==  u.email and user_password == u.password:
+        for user in users:
+            if user_email ==  user[email] and user_password == user[password]:
                 return("You have successfully logged in!")
             else: 
                 return("Wrong credentils!")
 
+print("="*40)
+
 # creating a rider1 object
-rider1 = User("Tom", "Kagi", "0750112791", "nnrobin37@gmail.com", "wentoride123.")
-
-# retrieving the object's email value
-print(rider1.email) 
-
-#calling the greeting function
-print(rider1.greeting()) 
+rider1 = User()
 
 # saving the signup details
-print(rider1.save_on_submit("Tom", "Kagi", "0750112791", "nnrobin37@gmail.com", "wentoride123."))
+print(rider1.save_details()
 
-# logging in the rider
-print(rider1.login("nnrobin37@gmail.com", "wentoride123.")) 
+#calling the greeting function
+print(rider1.greeting(input"Enter user id: "))  
 
+# find rider
+print(rider1.find_rider("Enter rider ID: "))
+
+# let's login the user
+print(rider1.login(input("Enter email address: "), input("Enter your password: ")))
